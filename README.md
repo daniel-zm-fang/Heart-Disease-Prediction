@@ -26,7 +26,8 @@ For comparison:
 * the fine-tuned XGBClassifier has a precision of 0.22, recall of 0.77, and F1 score of 0.35
 
 ## Commments
-* More diverse models can be added to the voting_clf to further improve the F1 score. I tried fine tuning SVC (with linear kernel) but the tuning continues even after a day, so I did not include SVC in the voting_clf.
+* From the cross-validation, each of the 4 estimators included in the voting classifier are very weak learners (F1 score around 0.34). So the final F1 score of 0.39 seems to be a reasonable result.
+* More diverse models can be added to the voting_clf to further improve the F1 score. I tried fine tuning SVC (with linear kernel) but the tuning continues even after severall hours. I've also tried training a BagginClassifier of linear SVMs with subset of data and features, but this BagginClassifier performs poorly.  so I did not include SVC in the voting_clf.
 * The majority of this project is focused on increasing the recall of the model while trying to minimize the sacrifice of precision. If recall is not the goal, then there is no need to using imblearn as some models already have a decent precision (around 0.55).
 * I thought about using stacking. But the mosting promising model (XGBClassifier) is already a complex base model by itself. Thus I don't think stacking will bring much, if any improvement.
 * I don't think some of the features are very useful. For example, features like MentalHealth (Thinking about your mental health, for how many days during the past 30 days was your mental health not good?) is subjective. Everyone rate their mental state differently.
