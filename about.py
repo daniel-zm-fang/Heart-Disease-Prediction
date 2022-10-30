@@ -37,3 +37,23 @@ def show_about_page():
     st.write('2. **Case 2: The model predicts that a person has heart disease.** The model is 21% accurate for this case. This means that the person has a 21% chance of having heart disease. ' + \
                 'Recall that the accuracy for the positive class is low because the model is being conservative in predicting heart disease. Even if there are little evidence, the model will still ' + \
                 'predict that the person has heart disease. So I would be cautious in this case. I would recommend the person to go to a doctor to get a more accurate diagnosis.')            
+    st.subheader('What is the model\'s feature importance?')
+    st.image('images/feature_importance.png', width=600)
+    st.write('The model\'s most important feature heart attack as it is one of heart disease\'s symptoms. The model also considers the person\'s age, general health as important features.')
+    st.subheader('What are some challenges of this project?')
+    st.write('1. **Data collection:** Each year, the CDC calls ~400,000 people to collect data. They asked each participant ~300 questions. So there are a lot of features to work with. ' + \
+                'However, most of the features are irrelevant to heart diease (see `codebook21_llcp-v2-508.pdf` on GitHub for how to interpret the raw data). After the initial ' + \
+                'feature selection, I have ~50 features left. Another issue is that the CDC changed the questions they asked each year. So the dataset is not consistent ' + \
+                'across years. I have to drop half of the features because they are only available in 1 or 2 years\' of data. In the end, I have ~20 features left.')
+    st.write('2. **Data cleaning:** There are still a lot of missing values in the dataset. A lot of participants simply didn\'t answer some questions. If I drop all ' + \
+                'the rows with missing values, I will lose a lot of data (more than 50%). I didn\'t impute the missing values because I don\'t want to introduce bias ' + \
+                'the XGBClassifier model can handle missing values.')
+    st.write('3. **Imbalance** The biggest challenge of this project is dealing with the imbalanced dataset. 94.4% of the participants don\'t have heart disease. If I just predict that ' + \
+                'every participant doesn\'t have heart disease, I will be 94.4% accurate. This is why I prefer the f1 and recall metrics over accuracy. ' + \
+                'To improve the model\'s performance on the positive class, I set the `scale_pos_weight` parameter in the XGBClassifier model. ' + \
+                'Other methods I tried include random oversampling, SMOTE, random undersampling, and ensemble methods. I prefer setting the `scale_pos_weight` parameter ' + \
+                'because we are not losing any data (as in random undersampling) and we are not introducing bias (as in random oversampling and SMOTE).')
+    st.subheader('What are some future improvements?')
+    st.write('1. **More unique minority class data:** Even I included 5 years of data, the minority class is still very hard to predict. This is because ' + \
+                'most of the minority class data are very similar to each other (the model already learned the patterns). I would like to collect more data ' + \
+                'from the minority class to improve the model\'s performance. I am hoping that the CDC will ask more questions about heart disease in the future surveys.')

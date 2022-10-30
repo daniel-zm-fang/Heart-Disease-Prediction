@@ -43,10 +43,12 @@ def show_prediction_page():
         heart_attack = st.checkbox('Have you ever had a heart attack?', value=False)
         stroke = st.checkbox('Have you ever had a stroke?', value=False)
         told_chol_high = st.checkbox('Have you ever been told by a doctor that your cholesterol level is high?', value=False)
+        arthritis = st.checkbox('Have you ever been told by a doctor that you have arthritis?', value=False)
 
     ok = st.button('Predict', type='primary')
     if ok:
-        args_lst = [gen_health, asthma, phys_active, skin_cancer, bmi, smoking, alcohol, age_cat] + races + [kidney_disease, bronchitis, depression, diabetes, sex, heart_attack, cholesterol, stroke, told_chol_high]
+        args_lst = [gen_health, asthma, phys_active, skin_cancer, bmi, smoking, alcohol, age_cat] + races + [kidney_disease, bronchitis, depression, diabetes, sex, heart_attack, cholesterol, stroke, told_chol_high, arthritis]
+        print(len(args_lst))
         X = np.array(args_lst).reshape(1, -1)
         X = std_scaler.transform(X)
         y_pred = round(100 * xgb_clf.predict_proba(X)[0][1], 2)

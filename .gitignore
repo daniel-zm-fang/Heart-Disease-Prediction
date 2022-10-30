@@ -1,5 +1,5 @@
 .vscode
-
+__pycache__
 test.py
 *.db
 *.csv

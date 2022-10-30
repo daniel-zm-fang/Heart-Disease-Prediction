@@ -24,6 +24,7 @@ pytorch-lightning       1.7.7
 scikit-learn            1.0.2
 six                     1.16.0
 sklearn                 0.0
+streamlit               1.14.0
 torch                   1.12.1
 virtualenv              20.13.0
 xgboost                 1.6.0
