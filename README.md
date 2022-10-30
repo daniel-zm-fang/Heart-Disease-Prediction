@@ -32,3 +32,6 @@ For comparison:
 * I thought about using stacking. But the mosting promising model (XGBClassifier) is already a complex base model by itself. Thus I don't think stacking will bring much, if any improvement.
 * I don't think some of the features are very useful. For example, features like MentalHealth (Thinking about your mental health, for how many days during the past 30 days was your mental health not good?) is subjective. Everyone rate their mental state differently.
 * To improve the model, more minority samples (people that have heart diease) and more objective features (ex. BMI) will definitely help with the models.
+
+* tweaking the models doesn't lead to much improvement gain. The default models have almost the same performance.
+* 
