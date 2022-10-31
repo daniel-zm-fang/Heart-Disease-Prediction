@@ -19,5 +19,5 @@ streamlit run app.py
 ```
 
 ## Dataset
-Since the raw datsets are too large to be uploaded to GitHub (2.3 GB), I have only uploaded 100% of the cleaned dataset. The raw datasets can be downloaded from
+Since the raw datsets are too large to be uploaded to GitHub (2.3 GB), I have only uploaded 10% of cleaned dataset for data exploration. The raw datasets can be downloaded from
 [here](https://www.cdc.gov/brfss/annual_data/annual_data.htm). The datasets are downloaded in `.xpt` and converted to `.csv`.
