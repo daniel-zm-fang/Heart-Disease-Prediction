@@ -2,6 +2,16 @@
 __pycache__
 test.py
 *.db
-*.csv
 lightning_logs
 .ipynb_checkpoints
+bin
+pyvenv.cfg
+lib
+etc
+share
+data/LLCP2017.csv
+data/LLCP2018.csv
+data/LLCP2019.csv
+data/LLCP2020.csv
+data/LLCP2021.csv
+data/heart_2020_cleaned.csv
