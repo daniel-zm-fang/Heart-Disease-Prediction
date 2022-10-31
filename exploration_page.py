@@ -2,12 +2,10 @@ import streamlit as st
 import pandas as pd
 import plotly.graph_objects as go
 import plotly.express as px
-import matplotlib.pyplot as plt
-import seaborn as sns
     
 
 def show_exploration_page():
-    st.write('**This page describes the main features of the dataset that is used to train the model. Since the dataset is' + \
+    st.write('**This page describes the main features of the dataset that is used to train the model. Since the dataset is ' + \
                 'very large, we will only use a sample of 10\% of the data. The following result is calculated in real-time' + \
                 'using the `LLCP_agg_cleaned_10_percent.csv` dataset on this project GitHub. The following plots are interactive. ' + \
                 'You can hover over the points to see the exact values.**')
