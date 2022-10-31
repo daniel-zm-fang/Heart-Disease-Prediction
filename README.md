@@ -1,7 +1,7 @@
 # Heart-Disease-Prediction
 
 ![app screenshot](images/app_screenshot.png)
-[Link to the web app](https://daniel-zm-fang-heart-disease-prediction-app-fdv13h.streamlitapp.com/)
+[Link to the web app](https://daniel-zm-fang-heart-disease-prediction-app-7du8eh.streamlitapp.com/)
 
 Most of the information is moved to the About section of the web app.
 
