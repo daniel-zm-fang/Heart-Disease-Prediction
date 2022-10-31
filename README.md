@@ -1,5 +1,6 @@
 # Heart-Disease-Prediction
 
+![app screenshot](images/app_screenshot.png)
 [Link to the web app](https://daniel-zm-fang-heart-disease-prediction-app-fdv13h.streamlitapp.com/)
 
 Most of the information is moved to the About section of the web app.
@@ -18,5 +19,5 @@ streamlit run app.py
 ```
 
 ## Dataset
-Since the raw datsets are too large to be uploaded to GitHub (2.3 GB), I have only uploaded the cleaned dataset. The raw datasets can be found 
+Since the raw datsets are too large to be uploaded to GitHub (2.3 GB), I have only uploaded 100% of the cleaned dataset. The raw datasets can be downloaded from
 [here](https://www.cdc.gov/brfss/annual_data/annual_data.htm). The datasets are downloaded in `.xpt` and converted to `.csv`.
