@@ -43,6 +43,7 @@ def show_about_page():
                     'predict that the person has heart disease. So I would be cautious in this case. I would recommend the person to go to a doctor to get a more accurate diagnosis.')            
     st.subheader('What is the model\'s feature importance?')
     with st.expander('Show', expanded=True):
+        st.info('There is a bug in Streamlit that might prevent the images to be displayed. Please open the images in a new tab to see them.') 
         st.image('images/xgb_feature_importance.png', width=600)
         st.write('The above feature importance plot is generated on the trained XGBClassifier model. The model\'s most important feature is heart attack as it is one of heart disease\'s symptoms. The model also considers the person\'s age, general health as important features.')
         col1, col2 = st.columns(2)
