@@ -12,7 +12,7 @@ def show_about_page():
                     'Specifically, I downloaded the datasets from 2017 to 2021 and combined them into one dataset. After some data cleaning and feature engineering, the final dataset has 2127204 rows and 23 columns.')
     st.subheader('What is the model used and how accurate is it?')
     with st.expander('Show', expanded=True):
-        st.write('The model is the XGBClassifier model from the XGBoost library. The model is trained on the `LLCP_agg_cleaned.csv`' + \
+        st.write('After model selection, the best performing model is the XGBClassifier from the XGBoost library. The model is trained on the `LLCP_agg_cleaned.csv`' + \
                     ' dataset on this project GitHub. The model is trained on 80% of the data and tested on 20% of the data. Here is its classification report on the test set (can also be found in `exploration_5.ipynb`):')
         st.table(
             pd.DataFrame([
