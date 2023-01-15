@@ -72,8 +72,8 @@ def show_about_page():
     st.subheader('What are some future improvements?')
     with st.expander('Show', expanded=True):
         st.write('1. **More unique minority class data:** Even I included 5 years of data, the minority class is still very hard to predict. This is because ' + \
-                    'most of the minority class data are very similar to each other (the model already learned the patterns). I would like to collect more data ' + \
-                    'from the minority class to improve the model\'s performance. I am hoping that the CDC will ask more questions about heart disease in the future surveys.')
+                    'most of the minority class data are very similar to each other (the model already learned the patterns). There are also many **inconsistent** labels (inputs with the same features ' + \
+                    'but different labels. I would like to collect more data from the minority class to improve the model\'s performance. I am hoping that the CDC will ask more questions about heart disease in the future surveys.')
         st.write('2. **More data from other countries:** The model is trained on a dataset from the US. This means that model might not be as accurate for people outside the US.' + \
                     'The problem is that the CDC doesn\'t have a similar survey in other countries. Even if they do, the questions that they ask the participants are likely to be different. ' + \
                     'This means that I need to start engineering features from scratch.')
